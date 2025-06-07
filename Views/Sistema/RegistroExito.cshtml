@@ -1,0 +1,26 @@
+﻿@model SistemaCuidado.Models.ClaseUsuarios
+<div class="align-center">
+<H1>REGISTRO EXITOSO</H1>
+</div>
+<hr />
+<H4>Datos</H4>
+<hr />
+<div>
+	<label>El usuario @Model.Correo</label>
+</div>
+<div>
+	<label>Nombre: @Model.Nombre @Model.ApePaterno @Model.ApeMaterno</label>
+</div>
+<div>
+	<label>Edad: @Model.Edad años</label>
+</div>
+<div>
+	<form asp-action="PáginaUsuarios" method="get">
+		<input type="submit" value="Continuar" class="btn btn-dark" />
+	</form>
+</div>
+
+
+
+
+

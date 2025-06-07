@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Inicio";
+}
+<div class="text-center">
+    <font color="">
+    <h1>Apoyo a la salud</h1>
+    <h4>"Descubre como cuidarte"</h4>
+    </br>
+    </br>
+    <form asp-controller="Sistema" asp-action="Logueo" method="get">
+        <div class="form-group">
+            <input type="submit" value="Iniciar Sesión" class="btn btn-outline-dark" />
+        </div>
+    </form>
+    </br>
+    <form asp-controller="Sistema" asp-action="Registro" method="get">
+        <div class="form-group">
+            <input type="submit" value="Registrarse" class="btn btn-outline-danger" />
+        </div>
+    </form>
+    </font>
+</div>

@@ -1,0 +1,52 @@
+﻿@model SistemaCuidado.Models.ClaseUsuarios
+@{
+    ViewData["Title"] = "Sistema de Salud";
+}
+<form asp-action="PáginaUsuarios" method="post">
+	<p style="text-align: right">
+		<button type="submit" name="op" value="Cerrar Sesión" class="btn btn-outline-success">Cerrar Sesión</button>
+	<p style="text-align: right">
+</form>
+<h1>Sistema de Salud</h1>
+<H4>@Model.Nombre @Model.ApePaterno @Model.ApeMaterno</H4>
+<hr />
+<div class="">
+	
+	<form asp-action="PáginaUsuarios" method="post">
+		<p style="text-align: right">
+		Si tus datos no aparecen o no son correctos</br>Pulse el botón "Actualizar" para ingresar los datos correctos
+		</br>
+			<button type="submit" name="op" value="Actualizar" class="btn btn-outline-danger">Actualizar</button>
+		<p style="text-align: right">
+	</form>
+</div>
+<hr />
+<H4>Datos</H4>
+<hr />
+<div>
+	<label>Genero: @Model.Genero</label>
+</div>
+<div>
+	<label>Edad: @Model.Edad</label>
+</div>
+<div>
+	<label>Altura: @Model.Altura m</label>
+</div>
+<div>
+	<label>Peso: @Model.Peso Kg</label>
+</div>
+<div>
+	<label>Enfermedades, padecimientos y/o sintomas: @Model.Enfermedades</label>
+</div>
+<hr />
+<H4>Recomendación Inteligente</H4>
+<hr />
+	<form asp-action="PáginaUsuarios" method="post">
+	<label>Para recibir recomendaciones para sus padecimientos</br>Pulse en el botón "Generar"</label>
+		</br>
+	<button class="btn btn-outline-dark" class="Submit" name="op"value="Recomendaciones">Generar</button>
+	</form>
+
+	<p style="background-color: rgb(200,200,200)">
+	@ViewBag.Respuesta
+	</p>
